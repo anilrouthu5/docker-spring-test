@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+       - /target
+       - E:\projects\Docker\spring-boot-docker-test:/app
+    ports:
+      - "4000:8080"
+  tests:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+       - /target
+       - E:\projects\Docker\spring-boot-docker-test:/app
