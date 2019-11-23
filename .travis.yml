@@ -3,7 +3,7 @@ services:
   - docker
 
 before-install:
-  - docker build -t docker-spring-test -f Dockerfile.dev .
+  - docker build -t spring-boot-docker-test -f Dockerfile.dev .
 
 script: 
-  - docker run docker-spring-test mvn test --coverage
+  - docker run spring-boot-docker-test mvn test --coverage
